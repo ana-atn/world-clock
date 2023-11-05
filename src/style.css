@@ -1,6 +1,59 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/072/original/world-map.jpg?1699200907");
+  font-family: "Montserrat", sans-serif;
+}
+
 h1 {
   text-align: center;
 }
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+a {
+  color: rgba(0, 0, 0, 0.6);
+}
+a:hover {
+  color: white;
+  background-color: #94380a;
+}
+.container {
+  background-color: rgb(247, 245, 240, 0.9);
+  max-width: 600px;
+  margin: 100px auto;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.clock {
+  text-align: end;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.3);
+}
+.city small {
+  font-size: 18px;
+  vertical-align: middle;
+}
+.city-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+.date {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 5px 0;
+}
+.time {
+  font-size: 35px;
+}
 footer {
   text-align: center;
+  color: rgba(0, 0, 0, 0.9);
 }
