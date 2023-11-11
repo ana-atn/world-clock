@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock App</title>
   </head>
   <body>
@@ -26,20 +27,20 @@
         <option>London</option>
         <option>Tokyo</option>
       </select>
-      <div class="city">
+      <div class="city" id="sydney">
         <div class="city-name">
           Sydney
-          <div class="date">November 6, 2023</div>
+          <div class="date"></div>
         </div>
-        <div class="time">1:54:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="city">
+      <div class="city" id="paris">
         <div class="city-name">
           Paris
-          <div class="date">November 6, 2023</div>
+          <div class="date"></div>
         </div>
 
-        <div class="time">1:54:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
