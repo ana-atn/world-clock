@@ -22,7 +22,7 @@ a:hover {
 .container {
   background-color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
-  margin: 100px auto;
+  margin: 100px auto 50px;
   border: solid 8px rgba(0, 0, 0, 0.5);
   border-color: #793937;
   border-radius: 10px;

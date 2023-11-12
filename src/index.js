@@ -22,7 +22,40 @@ function updateTime() {
   parisTimeElement.innerHTML = moment()
     .tz("Europe/Paris")
     .format("h:mm:ss [<small>]A[</small>]");
+
+  let reykyavikElement = document.querySelector("#san-francisco");
+  reykyavikDateElement = reykyavikElement.querySelector(".date");
+  reykyavikTimeElement = reykyavikElement.querySelector(".time");
+
+  reykyavikDateElement.innerHTML = moment()
+    .tz("Atlantic/Reykjavik")
+    .format("MMMM D, YYYY");
+
+  reykyavikTimeElement.innerHTML = moment()
+    .tz("Atlantic/Reykjavik")
+    .format("h:mm:ss [<small>]A[</small>]");
+}
+
+function updateCities(event) {
+  let cityTimezone = event.target.value;
+  let cityName = cityTimezone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimezone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  <div class="city" id="sydney">
+  <div class="city-name">
+            ${cityName}
+            <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:ss"
+          )} <small>${cityTime.format("A")}</small></div>
+        </div>
+  `;
 }
 
 updateTime;
 setInterval(updateTime, 1000);
+
+let citySelectElement = document.querySelector("#city");
+citySelectElement.addEventListener("change", updateCities);
